@@ -37,6 +37,35 @@ namespace Treygol
             Console.WriteLine($"Для данного треугольника со сторонами {a} {b} {c} площадь равна {s}");
 
         }
+        
+        public void vid(float a, float b, float c)
+    {
+      this.a = a;
+      this.b = b;
+      this.c = c;
+
+      if (a == b || a == c || b == c)
+      {
+        Console.Write("Треугольник равнобедренный");
+      }
+      
+
+        else if ((Math.Pow(a, 2) == (c * c) + (b * b)) || ((Math.Pow(b, 2) == (c * c) + (a * a)) || ((Math.Pow(c, 2) == (a * a) + (b * b)))))
+        {
+          Console.WriteLine("Треугольник прямоугольный");
+        }
+
+          else if (a == b && b == c) 
+          {
+            Console.WriteLine("Треугольник равносторонний");
+          }
+
+      else
+      {
+        Console.WriteLine("Треугольник остроугольный");
+      }
+
+    }
 
 
 

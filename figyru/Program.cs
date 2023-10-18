@@ -59,6 +59,6 @@ while (true)
 
         treygol.Perimetr(a, b, c);
         treygol.Ploshad(a, b, c);
-
+        treygol.vid(a, b, c); 
     }
 }

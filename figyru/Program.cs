@@ -57,8 +57,8 @@ while (true)
         Console.Write("Сторона c: ");
         float c = float.Parse(Console.ReadLine());
 
-        Treygolnik.Perimetr(a, b, c);
-        Treygolnik.Ploshad(a, b, c);
+        treygol.Perimetr(a, b, c);
+        treygol.Ploshad(a, b, c);
 
     }
 }

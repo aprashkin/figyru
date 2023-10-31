@@ -4,29 +4,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kvadrat
+namespace figures
 {
-  internal class Square
-  {
-    private float g;
-
-    public void Perimetr(float g)
+    internal class Square
     {
-      this.g = g;
-      float p = g * 4;
 
-      Console.WriteLine($"Периметр квадрата со стороной {g} = {p}");
+        protected double a;
+
+        public Square(double a)
+        {
+            this.a = a;
+        }
+
+        protected double perimeter()
+        {
+            return (4 * a);
+        }
+
+        protected double area()
+        {
+            return (a * a);
+        }
+
+        public void Out()
+        {
+            Console.WriteLine($"Квадрат со сторонами {a}");
+            Console.WriteLine($"Площадь квадрата: {area():f3}");
+            Console.WriteLine($"Периметр квадрата: {perimeter():f3}");
+        }
+
+
     }
-    public void Ploshad(float g)
-    {
-      this.g = g;
-
-      float s = g * g;
-      Console.WriteLine($"Площадь квадрата со стороной {g} = {s}");
-    }
-
-
-
-
-  }
 }

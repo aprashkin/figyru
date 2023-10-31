@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Circles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +10,7 @@ namespace Circles
 {
     internal class Circle
     {
-        private float r;
+        protected float r;
         public void Perimetr(float r)
         {
             this.r += r;
@@ -21,7 +23,8 @@ namespace Circles
             this.r += r;
             double s = Math.PI * Math.Pow(r, 2);
             Console.WriteLine($"Радиус круга равен {r}, площадь равна {s}");
-        }
+        }  
     }
 }
+
 //люблю шарпы как друга. как тверь любила мишу круга

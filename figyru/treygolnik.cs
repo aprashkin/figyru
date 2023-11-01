@@ -8,45 +8,45 @@ namespace Treygol
 {
     internal class Treygolnik
     {
-        private float a;
-        private float b;
-        private float c;
+        private double a;
+        private double b;
+        private double c;
 
-        public void Perimetr(float a, float b, float c)
+        public void Perimetr(double a, double b, double c)
         {
 
             this.a = a;
             this.b = b;
             this.c = c;
-            float p;
+            double p;
             p = a + b + c;
             Console.WriteLine($"Для данного треугольника со сторонами {a} {b} {c} периметр равен {p}");
 
         }
 
-        public void Ploshad(float a, float b, float c)
+        public void Ploshad(double a, double b, double c)
         {
             this.a = a;
             this.b = b;
             this.c = c;
-            float s;
+            double s;
 
-            float pp = (a + b + c) / 2;
+            double pp = (a + b + c) / 2;
 
-            s = (float)Math.Sqrt(pp * (pp - a) * (pp - b) * (pp - c));
+            s = (double)Math.Sqrt(pp * (pp - a) * (pp - b) * (pp - c));
             Console.WriteLine($"Для данного треугольника со сторонами {a} {b} {c} площадь равна {s}");
 
         }
         
-        public void vid(float a, float b, float c)
+        public void vid(double a, double b, double c)
     {
       this.a = a;
       this.b = b;
       this.c = c;
 
-      if (a == b || a == c || b == c)
+      if (a == b && b == c)
       {
-        Console.Write("Треугольник равнобедренный");
+        Console.Write("Треугольник равноcторонний");
       }
       
 
@@ -55,9 +55,9 @@ namespace Treygol
           Console.WriteLine("Треугольник прямоугольный");
         }
 
-          else if (a == b && b == c) 
+          else if (a == b || a == c || b == c) 
           {
-            Console.WriteLine("Треугольник равносторонний");
+            Console.WriteLine("Треугольник равнобедренный");
           }
 
       else

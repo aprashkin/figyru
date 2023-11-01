@@ -10,15 +10,15 @@ namespace Circles
 {
     internal class Circle
     {
-        protected float r;
-        public void Perimetr(float r)
+        protected double r;
+        public void Perimetr(double r)
         {
             this.r += r;
             double p = 2 * Math.PI * r;
             Console.WriteLine($"Радиус круга равен {r}, периметр равен {p}");
         }
 
-        public void Ploshad(float r)
+        public void Ploshad(double r)
         {
             this.r += r;
             double s = Math.PI * Math.Pow(r, 2);

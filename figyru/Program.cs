@@ -1,10 +1,9 @@
-﻿using Pryamoygol;
+﻿
 
 using Circles;
 using Treygol;
 using figures;
 
-Rectangle rectangle = new Rectangle();
 Circle Circle = new Circle();
 Treygolnik treygol = new Treygolnik();
 
@@ -25,23 +24,25 @@ while (true)
         double s = double.Parse(Console.ReadLine());
         Square Squarepiro = new Square(s);
         Console.Clear();
+    }
 
         if (choise == 2)
         {
             Console.WriteLine("Прямоугольник\n\n");
             Console.Write("Введи 1 сторону прямоугольника: ");
-            float a = float.Parse(Console.ReadLine());
+            double a = double.Parse(Console.ReadLine());
             Console.Write("Введи 2 сторону прямоугольника: ");
-            float b = float.Parse(Console.ReadLine());
-            Console.Clear();
-            rectangle.Perimetr(a, b);
-            rectangle.Ploshad(a, b);
+            double b = double.Parse(Console.ReadLine());
+        Rectangle rectangle = new Rectangle(a, b);
+        Console.Clear();
+        rectangle.Out();
+            
         }
         if (choise == 3)
         {
             Console.WriteLine("Круг (но не Миша)");
             Console.Write("Введи радиус круга: ");
-            float r = float.Parse(Console.ReadLine());
+            double r = double.Parse(Console.ReadLine());
             Circle.Perimetr(r);
             Circle.Ploshad(r);
         }
@@ -50,13 +51,13 @@ while (true)
             Console.WriteLine("Треугольник");
 
             Console.Write("Сторона a): ");
-            float a = float.Parse(Console.ReadLine());
+            double a = double.Parse(Console.ReadLine());
 
             Console.Write("Сторона b: ");
-            float b = float.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
 
             Console.Write("Сторона c: ");
-            float c = float.Parse(Console.ReadLine());
+            double c = double.Parse(Console.ReadLine());
 
             treygol.Perimetr(a, b, c);
             treygol.Ploshad(a, b, c);
@@ -65,12 +66,12 @@ while (true)
         if (choise == 5)
         {
             Console.WriteLine("Пирамидки");
-            Console.WriteLine("Выберите основание пирамидки: \n1 - Круг(но не Миша)\n2 - Квадрат\n3 - Прямоугольник\n4 - Треугольник");
+            Console.WriteLine("Выберите основание пирамидки: \n1 - Квадрат\n2 - Круг(но не Миша)\n3 - Прямоугольник\n4 - Треугольник");
             int what = int.Parse(Console.ReadLine());
 
             if (what == 1)
             {
-                 
+                Console.Clear();
                 Console.WriteLine("Квадратик пирамидка");
                 Console.Write("Введите сторону квадрата для основания пирамидки: ");
                 double a = double.Parse(Console.ReadLine());
@@ -85,13 +86,29 @@ while (true)
 
             if (what == 2)
             {
+            Console.Clear();
+            Console.WriteLine(""); 
 
             }
 
             if (what == 3)
             {
+            Console.Clear();
+            Console.WriteLine("Прямоугольник пирамидка");
+            Console.WriteLine("Введите сторону а для основания пирамидки: ");
+            double a = double.Parse (Console.ReadLine());   
+            Console.WriteLine("Введите сторону в для основания пирамидки: ");
+            double b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите высоту h: ");
+            double h = double.Parse(Console.ReadLine());
+            
+            
 
-            }
+            RectPiramida rectPiramida = new RectPiramida(a, b, h);
+
+            Console.Clear();
+            rectPiramida.Out();
+        }
 
             if (what == 4)
             {
@@ -99,4 +116,4 @@ while (true)
             }
         }
     }
-}
+

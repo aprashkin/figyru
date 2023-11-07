@@ -1,6 +1,6 @@
 ﻿
 
-using Circles;
+
 using Treygol;
 using figures;
 
@@ -87,9 +87,13 @@ while (true)
             if (what == 2)
             {
             Console.Clear();
-            Console.WriteLine(""); 
-
-            }
+            Console.WriteLine("Круг пирамидка");
+            Console.WriteLine("Введите радиус круга для основания пирамидки: ");
+            double r = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите высоту: ");
+            double h = double.Parse(Console.ReadLine());
+            Circle circle = new Circle(r, h);
+        }
 
             if (what == 3)
             {

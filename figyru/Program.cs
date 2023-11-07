@@ -4,7 +4,7 @@
 using Treygol;
 using figures;
 
-Circle Circle = new Circle();
+
 Treygolnik treygol = new Treygolnik();
 
 

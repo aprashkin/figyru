@@ -21,7 +21,7 @@ namespace figures
         {
             double l = Math.Sqrt(Math.Pow(r, 2) + Math.Pow(h, 2));
             double x = Math.PI * r * l;
-            return Ploshad() + x;
+            return Ploshad() + x; 
         }
     }
 }

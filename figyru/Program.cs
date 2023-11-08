@@ -3,11 +3,7 @@
 
 using Treygol;
 using figures;
-
-
-
-
-
+using figyru;
 
 Console.WriteLine("Welcome!");
 
@@ -67,7 +63,7 @@ while (true)
             Console.Write("Сторона c: ");
             double c = double.Parse(Console.ReadLine());
 
-            Treygolnik treygol  = new Treygolnik(a, b, c);
+            Treygolnik treygol = new Treygolnik(a, b, c);
 
             Console.Clear();
             treygol.Out();
@@ -135,9 +131,26 @@ while (true)
             {
             Console.Clear();
             Console.WriteLine("Треугольная пирамидка");
-            Console.WriteLine("Треугольная пирамидка");
+            Console.WriteLine("Введите сторону а: ");
+            double a = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите сторону в: ");
+            double b = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите сторону с: ");
+            double c = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите высоту h: ");
+            double h = double.Parse(Console.ReadLine());
+
+            pirotreygolnik pirotreygolnik = new pirotreygolnik(a, b, c, h);
+            Treygolnik treygol = new Treygolnik(a, b, c);
+            Console.Clear();
             
-        }
+            treygol.vid(a, b, c);
+            pirotreygolnik.Out();
+            
+            }
         }
     }
 

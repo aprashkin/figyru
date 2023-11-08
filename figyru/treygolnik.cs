@@ -30,10 +30,10 @@ namespace Treygol
             return Math.Sqrt(we * (we - a) * (we - b) * (we - c));       
         }
         
-        public void Out()
+        public virtual void Out()
         {
-            Console.WriteLine($"Периметр треугольника равен: {peri()}");
-            Console.WriteLine($"Площадь треугольника равна: {area()}");
+            Console.WriteLine($"Периметр треугольника равен: {peri():f2}");
+            Console.WriteLine($"Площадь треугольника равна: {area():f2}");
         }
         
         public void vid(double a, double b, double c)

@@ -17,21 +17,17 @@ namespace figures
             this.r = r;
         }
 
-        public void Perimetr(double r)
-        { 
-            this.r = r;
-            double p = 2 * Math.PI * r;
-            Console.WriteLine($"Радиус круга равен {r}, периметр равен {p}");
-        }
-        double s;
-        public void Ploshad(double r)
+        protected double perimeter()
+        { return (2 * 3.14 * r); }
+
+        protected double area()
+        { return (r * r) * 3.14; }
+       
+
+        public virtual void Out()
         {
-            this.r = r;
-            double s = Math.PI * Math.Pow(r, 2); 
-            
+            Console.WriteLine($"Площадь круга с радиусом {r} равна {area():f3}; периметр равен {perimeter():f3}");
         }
-        public void Out()
-        { Console.WriteLine($"площадь круга равна {s}, периметр равен {p}" );
     }
 }
 

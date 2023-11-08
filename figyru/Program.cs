@@ -5,7 +5,7 @@ using Treygol;
 using figures;
 
 
-Treygolnik treygol = new Treygolnik();
+
 
 
 
@@ -17,34 +17,42 @@ while (true)
     Console.WriteLine("");
     int choise = int.Parse(Console.ReadLine());
     Console.Clear();
-    if (choise == 1)
-    {
-        Console.WriteLine("Квадрат\n\n");
-        Console.Write("Введи сторону квадрата: ");
-        double s = double.Parse(Console.ReadLine());
-        Square Squarepiro = new Square(s);
-        Console.Clear();
-    }
+        if (choise == 1)
+        {
+            Console.WriteLine("Квадрат\n\n");
+            Console.Write("Введи сторону квадрата: ");
+            double a = double.Parse(Console.ReadLine());
 
+            Square Square = new Square(a);
+
+            Console.Clear();
+            Square.Out();
+        }
+    
         if (choise == 2)
         {
             Console.WriteLine("Прямоугольник\n\n");
             Console.Write("Введи 1 сторону прямоугольника: ");
             double a = double.Parse(Console.ReadLine());
+
             Console.Write("Введи 2 сторону прямоугольника: ");
             double b = double.Parse(Console.ReadLine());
-        Rectangle rectangle = new Rectangle(a, b);
-        Console.Clear();
-        rectangle.Out();
-            
+
+            Rectangle rectangle = new Rectangle(a, b);
+
+            Console.Clear();
+            rectangle.Out();
         }
         if (choise == 3)
         {
             Console.WriteLine("Круг (но не Миша)");
             Console.Write("Введи радиус круга: ");
             double r = double.Parse(Console.ReadLine());
-            Circle.Perimetr(r);
-            Circle.Ploshad(r);
+            
+            Circle circle = new Circle(r);
+
+            Console.Clear();
+            circle.Out();
         }
         if (choise == 4)
         {
@@ -59,15 +67,17 @@ while (true)
             Console.Write("Сторона c: ");
             double c = double.Parse(Console.ReadLine());
 
-            treygol.Perimetr(a, b, c);
-            treygol.Ploshad(a, b, c);
-            treygol.vid(a, b, c);
+            Treygolnik treygol  = new Treygolnik(a, b, c);
+
+            Console.Clear();
+            treygol.Out();
+            treygol.vid(a, b, c);       
         }
         if (choise == 5)
         {
-            Console.WriteLine("Пирамидки");
-            Console.WriteLine("Выберите основание пирамидки: \n1 - Квадрат\n2 - Круг(но не Миша)\n3 - Прямоугольник\n4 - Треугольник");
-            int what = int.Parse(Console.ReadLine());
+          Console.WriteLine("Пирамидки");
+          Console.WriteLine("Выберите основание пирамидки: \n1 - Квадрат\n2 - Круг(но не Миша)\n3 - Прямоугольник\n4 - Треугольник");
+          int what = int.Parse(Console.ReadLine());
 
             if (what == 1)
             {
@@ -75,49 +85,59 @@ while (true)
                 Console.WriteLine("Квадратик пирамидка");
                 Console.Write("Введите сторону квадрата для основания пирамидки: ");
                 double a = double.Parse(Console.ReadLine());
+
                 Console.Write("Введите высоту: ");
                 double h = double.Parse(Console.ReadLine());
+
                 square_pyramid pyramid = new square_pyramid(a, h);
+
                 Console.Clear();
                 pyramid.Out();
-                Console.WriteLine();
             }
-        
+
 
             if (what == 2)
             {
-            Console.Clear();
-            Console.WriteLine("Круг пирамидка");
-            Console.WriteLine("Введите радиус круга для основания пирамидки: ");
-            double r = double.Parse(Console.ReadLine());
-            Console.WriteLine("Введите высоту: ");
-            double h = double.Parse(Console.ReadLine());
-            Circle circle = new Circle(r, h);
+                Console.Clear();
+                Console.WriteLine("Круг пирамидка");
+                Console.WriteLine("Введите радиус круга для основания пирамидки: ");
+                double r = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Введите высоту: ");
+                double h = double.Parse(Console.ReadLine());
+
+                Circle pirocircle = new pirocircle(r, h);
+
+                Console.Clear();       
+                pirocircle.Out();  
         }
 
             if (what == 3)
             {
-            Console.Clear();
-            Console.WriteLine("Прямоугольник пирамидка");
-            Console.WriteLine("Введите сторону а для основания пирамидки: ");
-            double a = double.Parse (Console.ReadLine());   
-            Console.WriteLine("Введите сторону в для основания пирамидки: ");
-            double b = double.Parse(Console.ReadLine());
-            Console.WriteLine("Введите высоту h: ");
-            double h = double.Parse(Console.ReadLine());
-            
-            
+                Console.Clear();
+                Console.WriteLine("Прямоугольник пирамидка");
+                Console.WriteLine("Введите сторону а для основания пирамидки: ");
+                double a = double.Parse (Console.ReadLine());   
 
-            RectPiramida rectPiramida = new RectPiramida(a, b, h);
+                Console.WriteLine("Введите сторону в для основания пирамидки: ");
+                double b = double.Parse(Console.ReadLine());
 
-            Console.Clear();
-            rectPiramida.Out();
+                Console.WriteLine("Введите высоту h: ");
+                double h = double.Parse(Console.ReadLine());
+
+                RectPiramida rectPiramida = new RectPiramida(a, b, h);
+
+                Console.Clear();
+                rectPiramida.Out();
         }
 
             if (what == 4)
             {
-
-            }
+            Console.Clear();
+            Console.WriteLine("Треугольная пирамидка");
+            Console.WriteLine("Треугольная пирамидка");
+            
+        }
         }
     }
 

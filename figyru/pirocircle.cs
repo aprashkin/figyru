@@ -7,21 +7,33 @@ using System.Threading.Tasks;
 
 namespace figures
 {
-    internal class pirocircle : Circle
+    class pirocircle : Circle
     {
 
-        private double h;
+     private double h;
 
-        public pirocircle (double r) : base(r)
+        public pirocircle(double r, double h) : base(r)
         {
             this.h = h;
-            this.r = r;
         }
+
         private double total_area()
         {
-            double l = Math.Sqrt(Math.Pow(r, 2) + Math.Pow(h, 2));
+            double l = Math.Sqrt( Math.Pow ( r, 2 ) + Math.Pow ( h, 2 ) );
             double x = Math.PI * r * l;
-            return Ploshad() + x; 
+
+            return area() + x;
+        }
+
+        private double volume() 
+        {
+            return (1.0 / 3) * area() * h;
+        }
+
+        public override void Out()
+        {
+            base.Out();
+            Console.WriteLine($"Площадь конуса равна {total_area():f3}, объём равен {volume():f3}") ;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace figyru
             this.c = c;
             this.h = h;
         }
-
+    
         private double surfacearea()
         {
             double p = peri() / 2;

@@ -19,6 +19,13 @@ namespace Treygol
             this.c = c;
         }
 
+        public void Proverka()
+        {
+            if ((a >= b + c) || (b >= a + c) || (c >= a + b))
+            {
+                Console.WriteLine("Такого треугольника не может быть!!(но для него все равно будет посчитан периметр, а площадь будет аннулирована)"); 
+            }
+        }
         public double peri()
         {
             return (a + b + c);

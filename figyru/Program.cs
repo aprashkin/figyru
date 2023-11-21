@@ -41,7 +41,6 @@ Console.WriteLine("Welcome!");
          {
              OutAll(choise);
              double a = double.Parse(Console.ReadLine());
-
              Square Square = new Square(a);
 
              Console.Clear();
@@ -77,6 +76,7 @@ Console.WriteLine("Welcome!");
          case 4:
          {
              OutAll(3);
+             
              double a = double.Parse(Console.ReadLine());
 
              double b = double.Parse(Console.ReadLine());
@@ -86,6 +86,7 @@ Console.WriteLine("Welcome!");
              Treygolnik treygol = new Treygolnik(a, b, c);
 
              Console.Clear();
+             treygol.Proverka();
              treygol.Out();
              treygol.vid(a, b, c);
          }
@@ -171,7 +172,8 @@ Console.WriteLine("Welcome!");
                      pirotreygolnik pirotreygolnik = new pirotreygolnik(a, b, c, h);
                      Treygolnik treygol = new Treygolnik(a, b, c);
                      Console.Clear();
-
+                     
+                     treygol.Proverka();
                      treygol.vid(a, b, c);
                      pirotreygolnik.Out();
 

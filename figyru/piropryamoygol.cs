@@ -9,7 +9,7 @@ namespace figures
 {
     internal class RectPiramida : Rectangle
     {
-        private double h;
+        private double h; 
 
         public RectPiramida(double a, double b, double h) : base(a, b)
         {

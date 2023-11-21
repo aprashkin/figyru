@@ -30,8 +30,7 @@ Console.WriteLine("Welcome!");
 
  while (true)
  {
-     Console.WriteLine(
-         "\n\nНад какой фигурой будем производить расчеты?\n1 - Квадрат\n2 - Прямоугольник\n3 - Круг\n4 - Треугольник\n5 - Пирамидки");
+     Console.WriteLine("\n\nНад какой фигурой будем производить расчеты?\n1 - Квадрат\n2 - Прямоугольник\n3 - Круг\n4 - Треугольник\n5 - Пирамидки");
      Console.WriteLine("");
      int choise = int.Parse(Console.ReadLine());
      Console.Clear();

@@ -20,7 +20,7 @@ namespace figures
         protected double perimeter()
         { return (2 * 3.14 * r); }
 
-        protected double area()
+        public virtual double area()
         { return (r * r) * 3.14; }
        
 
